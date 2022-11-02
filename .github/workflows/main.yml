@@ -39,4 +39,4 @@ jobs:
       # Run our tests
       - name: Test with PyTest
         run: |
-          pytest --cov=inflammation.models tests/text_models.py
+          pytest --cov=inflammation.models tests/test_models.py
