@@ -1,6 +1,7 @@
 """Tests for statistics functions within the Model layer."""
 
 import numpy as np
+import pytest
 import numpy.testing as npt
 
 
@@ -54,3 +55,10 @@ def test_daily_min_integers():
 
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_min(test_input), test_result)
+
+
+def test_daily_min_string():
+    from inflammation.models import daily_min
+
+    with pytest.raises(TypeError):
+        error_expected = daily_min([['abd', 'ads'], ['asd', 'auhs']])
