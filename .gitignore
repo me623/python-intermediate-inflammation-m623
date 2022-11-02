@@ -16,3 +16,4 @@
 # virtual emvs
 venv/
 inflammation_analysis.egg-info/
+yml_example.yml
