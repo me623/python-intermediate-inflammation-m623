@@ -18,20 +18,20 @@ jobs:
       - name: Checkout respository
         uses: actions/checkout@v2
     
-    # Set up Python env
-    name: Set up Python 3.9
-    uses: actions/setup-python@v2
-    with:
-      python-version: 3.9
-  
-    # Install dependencies
-    name: Install Python Dependencies
-    run: |
-      python3 -m pip install --upgrade pip
-      pip install -r requirements
-      pip install -e .
+      # Set up Python env
+      name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
     
-    # Run our tests
-    -name: Test with PyTest
-    -run: |
-      pytest --cov=inflammation.models tests/text_models.py
+      # Install dependencies
+      name: Install Python Dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install -r requirements
+        pip install -e .
+      
+      # Run our tests
+      -name: Test with PyTest
+      -run: |
+        pytest --cov=inflammation.models tests/text_models.py
