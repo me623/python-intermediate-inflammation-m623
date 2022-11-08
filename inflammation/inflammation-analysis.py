@@ -34,7 +34,7 @@ def main(args):
             patient_data = inflammation_data[args.patient]
             observations = [models.Observation(
                 day, value) for day, value in enumerate(patient_data)]
-            
+
             patient = models.Patient('UNKNOWN', observations)
             views.display_patient_record(patient)
 
