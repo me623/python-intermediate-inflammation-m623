@@ -23,3 +23,7 @@ def visualize(data_dict):
     fig.tight_layout()
 
     plt.show()
+
+
+def display_patient_record(patient):
+    return "{} wip".format(patient)

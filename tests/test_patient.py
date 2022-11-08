@@ -1,4 +1,4 @@
-"""Tests for the Patient model."""
+"""Tests for the Patient model.
 
 
 def test_create_patient():
@@ -8,3 +8,4 @@ def test_create_patient():
     p = Patient(name=name)
 
     assert p.name == name
+"""
