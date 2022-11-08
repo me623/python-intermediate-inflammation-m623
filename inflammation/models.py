@@ -90,7 +90,7 @@ class Patient(Person):
 
     @property
     def last_observation(self):
-        return self.observation[-1]
+        return self.observations[-1]
 
     def add_observation(self, value, day=None):
         if day is None:
@@ -112,7 +112,7 @@ class Doctor(Person):
         self.patients = patients
     
     def __str__(self):
-        return self.name, str(self.patients)
+        return ("{} {}".format(self.name,self.patients))
     
     def add_patient(self , patient: Patient):
         new_patient = Patient(patient)
