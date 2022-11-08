@@ -100,4 +100,4 @@ def test_standard_devation(test, expected):
     """test for standard deviation"""
     from inflammation.models import standard_deviation
 
-    npt.assert_almost_equal(standard_deviation(test), expected, decimal=7)
+    npt.assert_almost_equal(standard_deviation(test), expected, decimal=3)
