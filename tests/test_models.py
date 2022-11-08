@@ -89,6 +89,7 @@ def test_patient_normalise(test, expected, expect_raises):
         npt.assert_almost_equal(patient_normalise(
             np.array(test)), np.array(expected), decimal=2)
 
+
 @pytest.mark.parametrize(
     "test, expected",
     [
