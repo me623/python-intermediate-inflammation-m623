@@ -107,14 +107,15 @@ class Patient(Person):
 
 class Doctor(Person):
     """ A Person with Patients"""
-    def __init__(self, name: str, patients: Patient=[]):
+
+    def __init__(self, name: str, patients: Patient = []):
         super().__init__(name)
         self.patients = patients
-    
+
     def __str__(self):
-        return ("{} {}".format(self.name,self.patients))
-    
-    def add_patient(self , patient: Patient):
+        return ("{} {}".format(self.name, self.patients))
+
+    def add_patient(self, patient: Patient):
         new_patient = Patient(patient)
         self.patients.append(new_patient)
         return new_patient
