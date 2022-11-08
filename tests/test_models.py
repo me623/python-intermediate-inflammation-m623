@@ -88,3 +88,16 @@ def test_patient_normalise(test, expected, expect_raises):
     else:
         npt.assert_almost_equal(patient_normalise(
             np.array(test)), np.array(expected), decimal=2)
+
+@pytest.mark.parametrize(
+    "test, expected",
+    [
+        ([[0, 0], [0, 0], [0, 0]], [0, 0]),
+        ([[1, 2], [3, 4], [5, 6]], [1.633, 1.633]),
+    ]
+)
+def test_standard_devation(test, expected):
+    """test for standard deviation"""
+    from inflammation.models import standard_deviation
+
+    npt.assert_almost_equal(standard_deviation(test), expected, decimal=7)

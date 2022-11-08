@@ -119,3 +119,7 @@ class Doctor(Person):
         new_patient = Patient(patient)
         self.patients.append(new_patient)
         return new_patient
+
+def standard_deviation(data):
+    # calculates std of column
+    return np.std(data, axis=0)
