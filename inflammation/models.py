@@ -84,9 +84,9 @@ class Patient(Person):
     """Person with observation
     """
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, observations = []):
         super().__init__(name)
-        self.observations = []
+        self.observations = observations
 
     @property
     def last_observation(self):
